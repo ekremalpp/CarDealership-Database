@@ -13,13 +13,30 @@ DROP TABLE IF EXISTS Vehicles;
 DROP TABLE IF EXISTS Inventory;
 DROP TABLE IF EXISTS Sales_contracts;
 
--- Create the dealerships table 
+-- Create the Dealerships table 
 
 CREATE TABLE Dealerships (
 DealershipID INT AUTO_INCREMENT PRIMARY KEY,
 DealershipName VARCHAR(100) NOT NULL,
 DealershipAddress VARCHAR(100) NOT NULL,
-DealershipPhone VARCHAR(50) NOT NULL,
+DealershipPhone VARCHAR(50) NOT NULL
+);
+
+-- Create the Vehicles table 
+
+CREATE TABLE Vehicles(
+VIN VARCHAR(50) AUTO_INCREMENT PRIMARY KEY,
+`Year` INT NOT NULL,
+Make VARCHAR(50) NOT NULL,
+Model VARCHAR(50) NOT NULL,
+`Type` VARCHAR(50) NOT NULL,
+Color VARCHAR(50) NOT NULL,
+Idometer INT NOT NULL,
+Price DOUBLE NOT NULL
+);
+
+
+
 
 
 
