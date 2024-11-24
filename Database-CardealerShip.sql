@@ -55,6 +55,19 @@ Price DOUBLE NOT NULL,
 FOREIGN KEY(VIN) REFERENCES Vehicles(VIN)
 );
 
+INSERT INTO dealerships (name, address, phone)
+VALUES
+('DrivePro Autos', '321 Fast Lane, Metropolis, NY', '718-555-9001'),
+('Precision Motors', '654 Sunset Blvd, Hollywood, CA', '323-555-1122'),
+('Luxury Auto Group', '123 Oceanview Dr, Malibu, CA', '424-555-3344'),
+('UrbanDrive', '987 Green St, Brooklyn, NY', '646-555-5567'),
+('AutoXpress', '543 Maple Ave, Portland, OR', '503-555-7788'),
+('Prestige Motors', '234 Diamond Blvd, Las Vegas, NV', '702-555-8899'),
+('SilverLine Autos', '876 Oak St, San Francisco, CA', '415-555-9900'),
+('CarZone Sales', '111 Horizon Rd, Miami Beach, FL', '305-555-2233'),
+('MetroCar Sales', '333 River Ave, Austin, TX', '512-555-4455'),
+('Elite Vehicle Sales', '555 Elite Dr, Scottsdale, AZ', '480-555-6677');
+
 
 
 
