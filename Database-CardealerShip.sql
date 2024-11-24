@@ -56,7 +56,7 @@ FOREIGN KEY(VIN) REFERENCES Vehicles(VIN)
 );
 
 
-CREATE TABLE lease_contracts (
+CREATE TABLE Lease_contracts (
     id INT AUTO_INCREMENT PRIMARY KEY,
     Dealership_id INT,
     VIN VARCHAR(17),
@@ -123,7 +123,13 @@ VALUES
 (9, 'Sophia Miller', 5125554455, '5LMJJ3JT2LE123890', 20231202, 45000.00),  
 (10, 'James Davis', 4805556677, '1N4BL4CV4HC123456', 20231110, 13000.50);  
 
-
+INSERT INTO Lease_contracts (Dealership_id, VIN, lease_start_date, lease_end_date, monthly_payment, customer_name, customer_phone)
+VALUES
+(1, '1HGCM82633A123456', '2024-01-01', '2025-01-01', 350.00, 'John Doe', '718-555-9001'),  
+(2, '2FMDK3GC1BBA654321', '2024-02-01', '2025-02-01', 400.00, 'Jane Smith', '323-555-1122'),  
+(3, '3VW2B7AT6BM054987', '2024-03-01', '2025-03-01', 375.00, 'Alice Johnson', '415-555-3344'),
+(4, '4T1BF1FK0HU123654', '2024-04-01', '2025-04-01', 450.00, 'Robert Brown', '646-555-5567'),  
+(5, '5NMS3CAD1LH654321', '2024-05-01', '2025-05-01', 500.00, 'Emma White', '503-555-7788');  
 
 
 
