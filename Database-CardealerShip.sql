@@ -82,6 +82,23 @@ VALUES
 ('1N4BL4CV4HC123456', 2018, 'Nissan', 'Altima', 'Sedan', 'Black', 55000, 13000.50, 1);
 
 
+INSERT INTO Inventory (dealership_id, VIN)
+VALUES
+(1, '1HGCM82633A123456'),  -- Honda Civic
+(2, '2FMDK3GC1BBA654321'),  -- Ford Escape
+(3, '3VW2B7AT6BM054987'),  -- Volkswagen Jetta
+(4, '4T1BF1FK0HU123654'),  -- Toyota Camry
+(5, '5NMS3CAD1LH654321'),  -- Hyundai Santa Fe
+(6, '1G1ZD5ST0LF123456'),  -- Chevrolet Malibu
+(7, '2C4RDGBG0KR123987'),  -- Chrysler Pacifica
+(8, '3GNCJNSB5JL123789'),  -- Chevrolet Trax
+(9, '5LMJJ3JT2LE123890'),  -- Lincoln Nautilus
+(10, '1N4BL4CV4HC123456');  -- Nissan Altima
+
+
+
+
+
 
 
 
