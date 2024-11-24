@@ -19,13 +19,13 @@ CREATE TABLE Dealerships (
 Dealership_ID INT AUTO_INCREMENT PRIMARY KEY,
 DealershipName VARCHAR(50) NOT NULL,
 DealershipAddress VARCHAR(50) NOT NULL,
-DealershipPhone VARCHAR(12) NOT NULL
+DealershipPhone VARCHAR(15) NOT NULL
 );
 
 -- Create the Vehicles table 
 
 CREATE TABLE Vehicles(
-VIN VARCHAR(50) PRIMARY KEY,
+VIN VARCHAR(17) PRIMARY KEY,
 `Year` INT NOT NULL,
 Make VARCHAR(50) NOT NULL,
 Model VARCHAR(50) NOT NULL,
@@ -39,7 +39,7 @@ Sold BOOLEAN DEFAULT 0
 -- Create the Inventory table
 CREATE TABLE Inventory(
 dealership_id INT NOT NULL,
-VIN VARCHAR(50) NOT NULL,
+VIN VARCHAR(17) NOT NULL,
 FOREIGN KEY(dealership_id) REFERENCES Dealerships(Dealership_id),
 FOREIGN KEY(VIN) REFERENCES Vehicles(VIN)
 );
@@ -49,10 +49,24 @@ CREATE TABLE Sales_contracts(
 Contract_Id INT AUTO_INCREMENT PRIMARY KEY,
 Buyer_name VARCHAR(50),
 Buyer_phone  DOUBLE NOT NULL,
-VIN VARCHAR(50),
+VIN VARCHAR(17),
 Sales_date INT NOT NULL,
 Price DOUBLE NOT NULL,
 FOREIGN KEY(VIN) REFERENCES Vehicles(VIN)
+);
+
+
+CREATE TABLE lease_contracts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    Dealership_id INT,
+    VIN VARCHAR(17),
+    lease_start_date DATE NOT NULL,
+    lease_end_date DATE NOT NULL,
+    monthly_payment DOUBLE NOT NULL,
+    customer_name VARCHAR(50),
+    customer_phone VARCHAR(15),
+    FOREIGN KEY (Dealership_id) REFERENCES Dealerships(Dealership_id),
+    FOREIGN KEY (VIN) REFERENCES Vehicles(VIN)
 );
 
 INSERT INTO dealerships (name, address, phone)
